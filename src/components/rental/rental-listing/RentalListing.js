@@ -10,11 +10,11 @@ class RentalListing extends Component {
   }
   
   render() {
-    // const rentals = this.props.rentals;
+    const rentals = this.props.rentals;
     return (
       <section id="rentalListing">
         <h1 className="page-title">Your Home All Around the World</h1>
-        <RentalList rentals={this.props.rentals} />
+        <RentalList rentals={rentals} />
       </section>
     );
   }
