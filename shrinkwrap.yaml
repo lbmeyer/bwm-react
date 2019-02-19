@@ -16,6 +16,7 @@ dependencies:
   react-scripts: 2.1.1
   redux: 4.0.1
   redux-thunk: 2.3.0
+  titleize: 1.0.1
 packages:
   /@babel/code-frame/7.0.0:
     dependencies:
@@ -10561,6 +10562,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
+  /titleize/1.0.1:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha512-rUwGDruKq1gX+FFHbTl5qjI7teVO7eOe+C8IcQ7QT+1BK3eEUXJqbZcBOeaRP4FwSC/C1A5jDoIVta0nIQ9yew==
   /tmp/0.0.33:
     dependencies:
       os-tmpdir: 1.0.2
@@ -11507,3 +11514,4 @@ specifiers:
   react-scripts: 2.1.1
   redux: ^4.0.1
   redux-thunk: ^2.3.0
+  titleize: ^1.0.1
