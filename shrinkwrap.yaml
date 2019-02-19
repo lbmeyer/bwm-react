@@ -11,6 +11,7 @@ dependencies:
   popper.js: 1.14.7
   react: 16.8.2
   react-dom: 16.8.2
+  react-google-maps: 9.4.5
   react-redux: 6.0.0
   react-router-dom: 4.3.1
   react-scripts: 2.1.1
@@ -2800,6 +2801,10 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-faqwZqnWxbxn+F1d399ygeamQNy3lPp/H9H6rNrqYh4FSVCtcY+3cub1MxA8o9mDd55mM8Aghuu/kuyYA6VTsA==
+  /can-use-dom/0.1.0:
+    dev: false
+    resolution:
+      integrity: sha1-IsxKNKCrxDlQ9CxkEQJKP2NmtFo=
   /caniuse-api/3.0.0:
     dependencies:
       browserslist: 4.4.1
@@ -2861,6 +2866,10 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==
+  /change-emitter/0.1.6:
+    dev: false
+    resolution:
+      integrity: sha1-6LL+PX8at9aaMhma/5HqaTFAlRU=
   /chardet/0.7.0:
     dev: false
     resolution:
@@ -3197,6 +3206,10 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
+  /core-js/1.2.7:
+    dev: false
+    resolution:
+      integrity: sha1-ZSKUwUZR2yj6k70tX/KYOk8IxjY=
   /core-js/2.5.7:
     dev: false
     resolution:
@@ -3899,6 +3912,12 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha1-rT/0yG7C0CkyL1oCw6mmBslbP1k=
+  /encoding/0.1.12:
+    dependencies:
+      iconv-lite: 0.4.24
+    dev: false
+    resolution:
+      integrity: sha1-U4tm8+5izRq1HsMjgp0flIDHS+s=
   /end-of-stream/1.4.1:
     dependencies:
       once: 1.4.0
@@ -4515,6 +4534,18 @@ packages:
     dev: false
     resolution:
       integrity: sha1-VOmr99+i8mzZsWNsWIwa/AXeXVg=
+  /fbjs/0.8.17:
+    dependencies:
+      core-js: 1.2.7
+      isomorphic-fetch: 2.2.1
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      promise: 7.3.1
+      setimmediate: 1.0.5
+      ua-parser-js: 0.7.19
+    dev: false
+    resolution:
+      integrity: sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=
   /figgy-pudding/3.5.1:
     dev: false
     resolution:
@@ -5036,6 +5067,10 @@ packages:
       node: '>= 0.10'
     resolution:
       integrity: sha512-g7QtgWF4uYSL5/dn71WxubOrS7JVGCnFPEnoeChJmBnyR9Mw8nGoEwOgJL/RC2Te0WhbsEUCejfH8SZNJ+adYQ==
+  /google-maps-infobox/2.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-hTuWmWZZSOxf5D/z7l3/hTF1grgRvLG53BEKMdjiKOG+FcK/kH7vqseUeyIU9Zj2ZIqKTOaro0nknxpAuRq4Vw==
   /graceful-fs/4.1.15:
     dev: false
     resolution:
@@ -6042,6 +6077,13 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
+  /isomorphic-fetch/2.2.1:
+    dependencies:
+      node-fetch: 1.7.3
+      whatwg-fetch: 3.0.0
+    dev: false
+    resolution:
+      integrity: sha1-YRrhrPFPXoH3KVB0coGf6XM1WKk=
   /isstream/0.1.2:
     dev: false
     resolution:
@@ -6954,6 +6996,14 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-7Nyo8TFE5mDxtb1B8S80edmN+48=
+  /marker-clusterer-plus/2.1.4:
+    dev: false
+    resolution:
+      integrity: sha1-+O/3TVmdqzt9Dj/tUmTqDnBPXWc=
+  /markerwithlabel/2.0.2:
+    dev: false
+    resolution:
+      integrity: sha512-C/cbm1A0h/u54gwHk5ZJNdUU3V3+1BbCpRPMsMyFA7vF4yL+aB4rWpxACz29TpQ+cTg6/iQroExh0PMSRGtQFg==
   /math-random/1.0.4:
     dev: false
     resolution:
@@ -7387,6 +7437,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-rmTZ9kz+f3rCvK2TD1Ue/oZlns7OGoIWP4fc3llxxRXlOkHKoWPPWJOfFYpITabSow43QJbRIoHQXtt10VldyQ==
+  /node-fetch/1.7.3:
+    dependencies:
+      encoding: 0.1.12
+      is-stream: 1.1.0
+    dev: false
+    resolution:
+      integrity: sha512-NhZ4CsKx7cYm2vSrBAr2PvFOe6sWDf0UYLRqA6svUYg7+/TSfVAu49jYC4BvQ4Sms9SZgdqGBgroqfDhJdTyKQ==
   /node-forge/0.7.5:
     dev: false
     resolution:
@@ -8871,6 +8928,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-mEcocL8igTL8vdhoEputEsPAKeM=
+  /promise/7.3.1:
+    dependencies:
+      asap: 2.0.6
+    dev: false
+    resolution:
+      integrity: sha512-nolQXZ/4L+bP/UGlkfaIujX9BKxGwmQ9OT4mOt5yvy8iK1h3wqTEJCijzGANTCCl9nWjY41juyAn2K3Q1hLLTg==
   /promise/8.0.2:
     dependencies:
       asap: 2.0.6
@@ -9095,6 +9158,28 @@ packages:
     dev: false
     resolution:
       integrity: sha512-GoqeM3Xadie7XUApXOjkY3Qhs8RkwB/Za4WMedBGrOKH1eTuKGyoAECff7jiVonJchOx6KZ9i8ILO5XIoHB+Tg==
+  /react-google-maps/9.4.5:
+    dependencies:
+      babel-runtime: 6.26.0
+      can-use-dom: 0.1.0
+      google-maps-infobox: 2.0.0
+      invariant: 2.2.4
+      lodash: 4.17.11
+      marker-clusterer-plus: 2.1.4
+      markerwithlabel: 2.0.2
+      prop-types: 15.7.2
+      recompose: 0.26.0
+      scriptjs: 2.5.9
+      warning: 3.0.0
+    dev: false
+    peerDependencies:
+      '@types/googlemaps': ^3.0.0
+      '@types/markerclustererplus': ^2.1.29
+      '@types/react': ^15.0.0 || ^16.0.0
+      react: ^15.0.0 || ^16.0.0
+      react-dom: ^15.0.0 || ^16.0.0
+    resolution:
+      integrity: sha512-8z5nX9DxIcBCXuEiurmRT1VXVwnzx0C6+3Es6lxB2/OyY2SLax2/LcDu6Aldxnl3HegefTL7NJzGeaKAJ61pOA==
   /react-is/16.8.2:
     dev: false
     resolution:
@@ -9295,6 +9380,17 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-wlgPA6cCIIg9gKz0fgAPjnzh4yR/LnXovwuo9hvyGvx3h8nX4+/iLZplfUWasXpqD8BdnGnP5njOFjkUwPzvjA==
+  /recompose/0.26.0:
+    dependencies:
+      change-emitter: 0.1.6
+      fbjs: 0.8.17
+      hoist-non-react-statics: 2.5.5
+      symbol-observable: 1.2.0
+    dev: false
+    peerDependencies:
+      react: ^0.14.0 || ^15.0.0 || ^16.0.0
+    resolution:
+      integrity: sha512-KwOu6ztO0mN5vy3+zDcc45lgnaUoaQse/a5yLVqtzTK13czSWnFGmXbQVmnoMgDkI5POd1EwIKSbjU1V7xdZog==
   /recursive-readdir/2.2.2:
     dependencies:
       minimatch: 3.0.4
@@ -9781,6 +9877,10 @@ packages:
       node: '>= 4'
     resolution:
       integrity: sha512-i27Mic4KovM/lnGsy8whRCHhc7VicJajAjTrYg11K9zfZXnYIt4k5F+kZkwjnrhKzLic/HLU4j11mjsz2G/75g==
+  /scriptjs/2.5.9:
+    dev: false
+    resolution:
+      integrity: sha512-qGVDoreyYiP1pkQnbnFAUIS5AjenNwwQBdl7zeos9etl+hYKWahjRTfzAZZYBv5xNHx7vNKCmaLDQZ6Fr2AEXg==
   /scss-tokenizer/0.2.3:
     dependencies:
       js-base64: 2.5.1
@@ -10717,6 +10817,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+  /ua-parser-js/0.7.19:
+    dev: false
+    resolution:
+      integrity: sha512-T3PVJ6uz8i0HzPxOF9SWzWAlfN/DavlpQqepn22xgve/5QecC+XMCAtmUNnY7C9StehaV6exjUCI801lOI7QlQ==
   /uglify-es/3.3.9:
     dependencies:
       commander: 2.13.0
@@ -11509,6 +11613,7 @@ specifiers:
   popper.js: ^1.14.6
   react: ^16.6.3
   react-dom: ^16.6.3
+  react-google-maps: ^9.4.5
   react-redux: ^6.0.0
   react-router-dom: ^4.3.1
   react-scripts: 2.1.1
