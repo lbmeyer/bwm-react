@@ -1,8 +1,12 @@
+.map-container {
+  height: auto;
+}
+
 #rentalDetails {
   .upper-section {
     img {
       width: 100%;
-      height: 100%;
+      // height: auto;
     }
 
     margin-bottom: 30px;

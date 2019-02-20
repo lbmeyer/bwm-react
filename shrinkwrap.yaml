@@ -1,6 +1,7 @@
 dependencies:
   axios: 0.18.0
   bootstrap: 4.3.1
+  camel-case: 3.0.0
   express: 4.16.4
   font-awesome: 4.7.0
   http-proxy-middleware: 0.19.1
@@ -11603,6 +11604,7 @@ shrinkwrapVersion: 3
 specifiers:
   axios: ^0.18.0
   bootstrap: ^4.1.3
+  camel-case: ^3.0.0
   express: ^4.16.4
   font-awesome: ^4.7.0
   http-proxy-middleware: ^0.19.1
