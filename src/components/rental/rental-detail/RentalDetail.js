@@ -27,7 +27,9 @@ class RentalDetail extends Component {
                 </div>
                 <div className="col-md-6">
                   <div className="map-container">
-                    <RentalMap location={`${rental.city}, ${rental.street}`} />
+                    <div id="map">
+                      <RentalMap location={`${rental.city}, ${rental.street}`} />
+                    </div>                  
                   </div>
                 </div>
               </div>
