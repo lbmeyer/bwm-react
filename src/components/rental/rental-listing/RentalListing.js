@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import RentalList from './RentalList';
-import { fetchRentals } from 'actions';
+import { fetchRentals } from '../../../actions';
 
 class RentalListing extends Component {
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.dispatch(fetchRentals());
   }
-
+  
   render() {
+    const rentals = this.props.rentals;
     return (
       <section id="rentalListing">
         <h1 className="page-title">Your Home All Around the World</h1>
-        <RentalList rentals={this.props.rentals} />
+        <RentalList rentals={rentals} />
       </section>
     );
   }

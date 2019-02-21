@@ -23,5 +23,5 @@ app.use('/api/v1/rentals', rentalRoutes);
 const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
-  console.log('I am running');
+  console.log('I am running on port ', `${PORT}`);
 });
