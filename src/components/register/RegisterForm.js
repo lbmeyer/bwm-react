@@ -4,7 +4,7 @@ import { BwmInput } from '../shared/form/BwmInput';
 import { BwmResError } from '../shared/form/BwmResError';
 
 const RegisterForm = props => {
-  const { handleSubmit, pristine, reset, submitting, submitCb, valid, errors } = props;
+  const { handleSubmit, pristine, submitting, submitCb, valid, errors } = props;
   return (
     <form onSubmit={handleSubmit(submitCb)}>
       <Field
