@@ -8,7 +8,7 @@ import RentalListing from './components/rental/rental-listing/RentalListing';
 import RentalDetail from './components/rental/rental-detail/RentalDetail';
 import Login from './components/login/Login';
 import Register from './components/register/Register';
-import { checkAuthState } from './actions/auth';
+import { checkAuthState, logout } from './actions/auth';
 
 import './App.css';
 
@@ -22,12 +22,16 @@ class App extends Component {
     store.dispatch(checkAuthState());
   }
 
+  logoutUser() {
+    store.dispatch(logout());
+  }
+
   render() {
     return (
       <Provider store={store}>
         <Router>
           <div className="App">
-            <Header />
+            <Header logout={this.logoutUser} />
             <div className="container">
               <Route exact path="/" render={() => <Redirect to="/rentals" />} />
               <Route exact path="/rentals" component={RentalListing} />

@@ -6,6 +6,12 @@
 @import "rental/rental-detail";
 @import "rental/rental-detail";
 
+.clickable {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .page-title {
   font-size: 30px;
   font-weight: 700;

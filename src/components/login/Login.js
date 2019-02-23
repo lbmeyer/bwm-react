@@ -5,20 +5,18 @@ import { Redirect } from 'react-router-dom';
 import { login } from '../../actions/auth';
 
 class Login extends Component {
-  
-  loginUser = (userData) => {
+  loginUser = userData => {
     this.props.dispatch(login(userData));
-  }
+  };
 
-  render() { 
+  render() {
     const { isAuth, errors } = this.props.auth;
+    // if this.props.location.state is undefined (we didn't arrive on page)
+    // from register.js, we assign successRegister = false
+    const { successRegister } = this.props.location.state || false;
 
     if (isAuth) {
-      return (
-        <Redirect
-          to={{ pathname: '/rentals' }}
-        />
-      )
+      return <Redirect to={{ pathname: '/rentals' }} />;
     }
 
     return (
@@ -27,23 +25,31 @@ class Login extends Component {
           <div className="row">
             <div className="col-md-5">
               <h1>Login</h1>
-              <LoginForm submitCb={this.loginUser} errors={errors}/>
+              {
+                successRegister && 
+                  <div className="alert alert-success">
+                    <p>You have successfully registered. Please login now.</p>
+                  </div>
+              }
+              <LoginForm submitCb={this.loginUser} errors={errors} />
             </div>
             <div className="col-md-6 ml-auto">
               <div className="image-container">
-                <h2 className="catchphrase">Hundreds of awesome places in reach of few clicks.</h2>
-                <img src="" alt=""/>
+                <h2 className="catchphrase">
+                  Hundreds of awesome places in reach of few clicks.
+                </h2>
+                <img src="" alt="" />
               </div>
             </div>
           </div>
         </div>
       </section>
-    )
+    );
   }
 }
 
 const mapStateToProps = state => ({
   auth: state.auth
-})
+});
 
 export default connect(mapStateToProps)(Login);

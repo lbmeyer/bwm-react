@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { LOGIN_SUCCESS, LOGIN_FAILURE } from './types';
+import { LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT } from './types';
 import authService from '../services/authService';
 
 export const register = userData => {
@@ -34,11 +34,19 @@ export const login = userData => dispatch => {
     .then(res => res.data)
     .then(token => {
       // debugger;
-      localStorage.setItem('auth_token', token);
+      authService.saveToken(token);
       dispatch(loginSuccess());
     })
     .catch(error => {
       // debugger;
       dispatch(loginFailure(error.response.data.errors));
     })
+};
+
+export const logout = () => {
+  authService.invalidateUser();
+  
+  return {
+    type: LOGOUT
+  }
 }
