@@ -6,7 +6,7 @@ import {
   GoogleMap,
   InfoWindow,
   Circle,
-  Marker
+  // Marker
 } from 'react-google-maps';
 
 const MapComponent = props => {
