@@ -2,7 +2,6 @@ import { LOGIN_SUCCESS, LOGIN_FAILURE } from '../actions/types';
 
 const INITIAL_STATE = {
   isAuth: false,
-  token: '',
   errors: []
 };
 
@@ -12,7 +11,6 @@ export default function(state = INITIAL_STATE, action) {
       return {
         ...state,
         isAuth: true,
-        token: action.token,
         errors: []
       };
     case LOGIN_FAILURE:
