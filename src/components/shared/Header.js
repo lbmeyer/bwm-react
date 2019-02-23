@@ -9,9 +9,9 @@ class Header extends Component {
 
     if (isAuth) {
       return (
-        <Link className="nav-item nav-link clickable" to="/login" onClick={this.props.logout}>
+        <a className="nav-item nav-link clickable" onClick={this.props.logout}>
           Logout
-        </Link>
+        </a>
       );
     }
 
