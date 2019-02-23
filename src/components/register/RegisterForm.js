@@ -45,7 +45,7 @@ const RegisterForm = props => {
           type="submit"
           disabled={!valid || pristine || submitting}
         >
-          Submit
+          Register
         </button>
         <BwmResError errors={errors} />
       </div>
