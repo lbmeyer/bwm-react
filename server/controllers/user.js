@@ -105,6 +105,8 @@ exports.authMiddleware = function(req, res, next) {
   if (token) {
     const user = parseToken(token);
 
+    // find user from database by checking to see if the returned jwt user
+    // object's userId property matches any of the user ids in User
     User.findById(user.userId, (err, user) => {
       if (err) {
         return res.status(422).send({errors: normalizeErrors(err.errors)});
