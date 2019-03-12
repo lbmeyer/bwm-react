@@ -10,7 +10,7 @@ class RentalMap extends Component {
       <MapWithGeocode
         googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDW9tFSqG2mA0ym2NluRBVGZ6tPr8xbwRM&v=3.exp&libraries=geometry,drawing,places"
         loadingElement={<div style={{ height: `100%` }} />}
-        containerElement={<div style={{ height: `400px` }} />}
+        containerElement={<div style={{ height: `358px` }} />}
         mapElement={<div style={{ height: `100%` }} />}
         location={location}
       />

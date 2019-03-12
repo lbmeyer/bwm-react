@@ -129,6 +129,7 @@ exports.authMiddleware = function(req, res, next) {
   }
 }
 
+// Return jwt payload data. Object --> { userId, exp, iat, username } 
 function parseToken(token) {
   return jwt.verify(token.split(' ')[1], config.SECRET);
 }

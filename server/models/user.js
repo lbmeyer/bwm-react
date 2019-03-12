@@ -25,15 +25,15 @@ const userSchema = new Schema({
   },
   // stripeCustomerId: String,
   // revenue: Number,
-  rentals: [{type: Schema.Types.ObjectId, ref: 'Rental'}],
+  rentals: [{ type: Schema.Types.ObjectId, ref: 'Rental' }],
   // bookings: [{ type: Schema.Types.ObjectId, ref: 'Booking' }]
+  bookings: [{ type: Schema.Types.ObjectId, ref: 'Booking' }]
 });
 
 userSchema.methods.hasSamePassword = function(requestedPassword) {
-
   // return true or false depending on if passwords match
   return bcrypt.compareSync(requestedPassword, this.password);
-}
+};
 
 userSchema.pre('save', function(next) {
   const user = this;
@@ -41,9 +41,9 @@ userSchema.pre('save', function(next) {
   bcrypt.genSalt(10, function(err, salt) {
     bcrypt.hash(user.password, salt, function(err, hash) {
       user.password = hash;
-      next(); // call fn that is next in queue --> save 
+      next(); // call fn that is next in queue --> save
     });
   });
-})
+});
 
 module.exports = mongoose.model('User', userSchema);
