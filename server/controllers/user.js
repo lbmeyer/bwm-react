@@ -15,7 +15,7 @@ exports.auth = (req, res) => {
     });
   }
 
-  User.findOne({email}, (err, user) => {
+  User.findOne({email}, function(err, user) {
     if (err) {
       return res.status(422).send({errors: normalizeErrors(err.errors)});
     }
@@ -69,7 +69,7 @@ exports.register = (req, res) => {
     });
   }
 
-  User.findOne({email}, (err, existingUser) => {
+  User.findOne({email}, function(err, existingUser) {
     if (err) {
       return res.status(422).send({errors: normalizeErrors(err.errors)});
     }
@@ -107,7 +107,7 @@ exports.authMiddleware = function(req, res, next) {
 
     // find user from database by checking to see if the returned jwt user
     // object's userId property matches any of the user ids in User
-    User.findById(user.userId, (err, user) => {
+    User.findById(user.userId, function(err, user) {
       if (err) {
         return res.status(422).send({errors: normalizeErrors(err.errors)});
       }
