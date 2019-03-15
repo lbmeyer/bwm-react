@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DateRangePicker from 'react-bootstrap-daterangepicker';
 import { getRangeOfDates } from '../../helpers/index';
+import { BookingModal } from './BookingModal';
 
 import * as moment from 'moment';
 
@@ -11,9 +12,14 @@ export class Booking extends Component {
     this.bookedOutDates = [];
     this.dateRef = React.createRef();
     this.state = {
-      startAt: '',
-      endAt: '',
-      guests: 0
+      proposedBooking: {
+        startAt: '',
+        endAt: '',
+        guests: 0,
+      },
+      modal: {
+        open: false
+      }
     }
   }
 
@@ -50,19 +56,36 @@ export class Booking extends Component {
     this.dateRef.current.value = startAt + ' - ' + endAt;
 
     this.setState({
-      startAt,
-      endAt
+      proposedBooking: {
+        startAt,
+        endAt
+      }
     });
   }
 
   selectGuests = (e) => {
-    console.log(e.target);
     this.setState({
-      guests: parseInt(e.target.value)
+      proposedBooking: {
+        ...this.state.proposedBooking,
+        guests: parseInt(e.target.value)
+      }
     })
   }
 
-  reserveBooking = () => {
+  cancelConfirmation = () => {
+    this.setState({
+      modal: {
+        open: false
+      }
+    })
+  }
+
+  confirmProposedData = () => {
+    this.setState({
+      modal: {
+        open: true
+      }
+    })
     console.log(this.state);
   }
 
@@ -99,7 +122,7 @@ export class Booking extends Component {
             placeholder=""
           />
         </div>
-        <button onClick={this.reserveBooking} className="btn btn-bwm btn-confirm btn-block">
+        <button onClick={this.confirmProposedData} className="btn btn-bwm btn-confirm btn-block">
           Reserve place now
         </button>
         <hr />
@@ -109,6 +132,7 @@ export class Booking extends Component {
         <p className="booking-note-text">
           More than 500 people checked this rental in last month.
         </p>
+        <BookingModal closeModal={this.cancelConfirmation} open={this.state.modal.open} />
       </div>
     );
   }
