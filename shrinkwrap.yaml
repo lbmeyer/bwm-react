@@ -3,6 +3,7 @@ dependencies:
   bcrypt: 3.0.4
   body-parser: 1.18.3
   bootstrap: 4.3.1
+  bootstrap-daterangepicker: 3.0.3
   camel-case: 3.0.0
   express: 4.16.4
   font-awesome: 4.7.0
@@ -15,6 +16,7 @@ dependencies:
   npm-run-all: 4.1.5
   popper.js: 1.14.7
   react: 16.8.2
+  react-bootstrap-daterangepicker: 4.1.0
   react-dom: 16.8.2
   react-google-maps: 9.4.5
   react-redux: 6.0.0
@@ -2515,6 +2517,13 @@ packages:
     dev: false
     resolution:
       integrity: sha1-aN/1++YMUes3cl6p4+0xDcwed24=
+  /bootstrap-daterangepicker/3.0.3:
+    dependencies:
+      jquery: 3.3.1
+      moment: 2.24.0
+    dev: false
+    resolution:
+      integrity: sha512-RJ0iOpVornF/6bf+L1jzPr95MoPM7zp3MILtNZ7ADu5RZFoMznHD4GbPu3URkPhcPABA2RqMnhk/CvO7iyNBtw==
   /bootstrap/4.3.1:
     dev: false
     engines:
@@ -9212,6 +9221,16 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-Fl5Pic4F15G05qX7RmUqPZr1MtyFKJKSlRwMhel4kvDLrk/KcQ9QbpvyMTzv/0NN5957XFQ7r1BNHWi7qN59Pw==
+  /react-bootstrap-daterangepicker/4.1.0:
+    dev: false
+    peerDependencies:
+      bootstrap-daterangepicker: '*'
+      jquery: '*'
+      moment: '*'
+      prop-types: '*'
+      react: '*'
+    resolution:
+      integrity: sha512-BZwwRaWcUDZVVgzQBtbmnbV1jyNNlfI5v7Jxb9FNEJ9FW8m+hzJgDFUMUlvz3VKCe5JNKcv5fKBizIDFSIUu+A==
   /react-dev-utils/6.1.1:
     dependencies:
       '@babel/code-frame': 7.0.0
@@ -11732,6 +11751,7 @@ specifiers:
   bcrypt: ^3.0.4
   body-parser: ^1.18.3
   bootstrap: ^4.1.3
+  bootstrap-daterangepicker: ^3.0.3
   camel-case: ^3.0.0
   express: ^4.16.4
   font-awesome: ^4.7.0
@@ -11744,6 +11764,7 @@ specifiers:
   npm-run-all: ^4.1.5
   popper.js: ^1.14.6
   react: ^16.6.3
+  react-bootstrap-daterangepicker: ^4.1.0
   react-dom: ^16.6.3
   react-google-maps: ^9.4.5
   react-redux: ^6.0.0

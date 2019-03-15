@@ -1,0 +1,12 @@
+---
+  0 error pnpm: 
+    message: 
+      errno: -13
+      code: "EACCES"
+      syscall: "open"
+      path: "/usr/local/Cellar/node/11.6.0/pnpm-global/1/_tmp_92305_d29b8d25765d8cdd549986adcd65f754"
+    err: 
+      name: "Error"
+      message: "EACCES: permission denied, open '/usr/local/Cellar/node/11.6.0/pnpm-global/1/_tmp_92305_d29b8d25765d8cdd549986adcd65f754'"
+      code: "EACCES"
+      stack: "Error: EACCES: permission denied, open '/usr/local/Cellar/node/11.6.0/pnpm-global/1/_tmp_92305_d29b8d25765d8cdd549986adcd65f754'"
