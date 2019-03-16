@@ -17,14 +17,14 @@ exports.createBooking = function(req, res) {
       if (err) {
         return res.status(422).send({ errors: normalizeErrors(err.errors) });
       }
-
+      
       if (foundRental.user.id === user.id) {
         return res.status(422).send({
           errors: [{
               title: 'Invalid User',
               details: 'Cannot create booking on your own rental'
             }]
-        }); 
+          }); 
       }
 
       if (isValidBooking(booking, foundRental)) {
@@ -65,8 +65,7 @@ function isValidBooking(proposedBooking, rental) {
 
       const actualStart = moment(booking.startAt);
       const actualEnd = moment(booking.endAt);
-      
-      console.log(actualStart < proposedStart);
+    
       return ((actualStart < proposedStart && actualEnd < proposedStart) || (proposedEnd < actualEnd && proposedEnd < actualStart));
     }) 
   }

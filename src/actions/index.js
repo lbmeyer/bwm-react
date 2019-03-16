@@ -49,3 +49,16 @@ export const fetchRentalById = rentalId => dispatch => {
   //   dispatch(fetchRentalByIdSuccess(rental));
   // }, 1000)
 };
+
+export const createBooking = booking => {
+  return axiosInstance.post('/bookings', booking)
+    .then(res => res.data)
+    .catch(err => Promise.reject(err.response.data.errors))
+}
+
+// export const createBooking = (booking) => {
+//   debugger;
+//   return axiosInstance.post('/bookings', booking)
+//       .then(res => res.data)
+//       .catch(({response}) => Promise.reject(response.data.errors))
+// }
