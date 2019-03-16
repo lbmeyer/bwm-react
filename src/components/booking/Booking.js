@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import DateRangePicker from 'react-bootstrap-daterangepicker';
+import { ToastContainer, toast } from 'react-toastify';
 import { getRangeOfDates } from '../../helpers/index';
 import { BookingModal } from './BookingModal';
 
 import * as moment from 'moment';
 import { createBooking } from '../../actions/index';
-import { debug } from 'util';
 
 export class Booking extends Component {
   constructor() {
@@ -77,7 +77,7 @@ export class Booking extends Component {
     this.setState({
       proposedBooking: {
         ...this.state.proposedBooking,
-        guests: parseInt(e.target.value)
+        guests: parseInt(e.target.value, 10)
       }
     });
   };
@@ -115,6 +115,7 @@ export class Booking extends Component {
         this.addNewBookedOutDates(booking);
         this.cancelConfirmation();
         this.resetData();
+        toast.success('Booking has been successfully created!');
       },
       errors => {
         this.setState({ errors });
@@ -128,19 +129,6 @@ export class Booking extends Component {
   };
 
   resetData() {
-
-    // this.state = {
-    //   proposedBooking: {
-    //     startAt: '',
-    //     endAt: '',
-    //     guests: ''
-    //   },
-    //   modal: {
-    //     open: false
-    //   },
-    //   errors: []
-    // };
-
     this.dateRef.current.value = '';
 
     this.setState({ proposedBooking: { guests: '' }, errors: [] });
@@ -153,6 +141,7 @@ export class Booking extends Component {
 
     return (
       <div className="booking">
+        <ToastContainer />
         <h3 className="booking-price">
           $ {rental.dailyRate}{' '}
           <span className="booking-per-night">per night</span>
